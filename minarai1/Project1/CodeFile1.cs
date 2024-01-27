@@ -9,7 +9,7 @@ using System.Linq;
         static void Main(string[] args)
         {
             int n = 0;
-            string line = File.ReadLines(@"C:\quiz.txt").Skip(n).First();
+            string line = File.ReadLines(@"C:\service.txt").Skip(n).First();
             Console.WriteLine(line);
 
             string[] str = {"1: 1  2:  2  3:  8"};
