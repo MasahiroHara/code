@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer App - モダンタイマーアプリケーション</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1 class="app-title">
+                <span class="icon">⏰</span>
+                Timer App
+            </h1>
+        </header>
+
+        <main class="timer-container">
+            <div class="timer-display">
+                <div class="time-circle">
+                    <svg class="progress-ring" width="280" height="280">
+                        <circle class="progress-ring-circle" cx="140" cy="140" r="120"></circle>
+                    </svg>
+                    <div class="time-text">
+                        <span id="display">25:00</span>
+                        <div class="time-label" id="timer-label">作業時間</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timer-controls">
+                <button id="start-pause-btn" class="btn btn-primary">
+                    <span id="start-pause-text">開始</span>
+                </button>
+                <button id="reset-btn" class="btn btn-secondary">
+                    リセット
+                </button>
+            </div>
+
+            <div class="timer-settings">
+                <div class="setting-group">
+                    <label for="work-time">作業時間 (分)</label>
+                    <input type="number" id="work-time" min="1" max="60" value="25">
+                </div>
+                <div class="setting-group">
+                    <label for="break-time">休憩時間 (分)</label>
+                    <input type="number" id="break-time" min="1" max="30" value="5">
+                </div>
+            </div>
+
+            <div class="session-info">
+                <div class="session-counter">
+                    <span class="counter-label">完了セッション</span>
+                    <span id="session-count">0</span>
+                </div>
+            </div>
+        </main>
+
+        <div class="notification" id="notification">
+            <div class="notification-content">
+                <span id="notification-text"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
